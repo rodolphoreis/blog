@@ -6,11 +6,13 @@ import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <div>
-        <h2>Blog</h2>
-      </div>
-    </>
+    <div className="App">
+      <BrowserRouter>
+        <div className="container">
+          <Routes></Routes>
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
