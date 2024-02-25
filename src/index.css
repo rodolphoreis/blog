@@ -59,6 +59,7 @@ textarea {
   border-bottom: 1px solid #ccc;
   padding: 0.8em 0;
   background-color: transparent;
+  margin-bottom: 25px;
 }
 
 .btn {
@@ -72,6 +73,7 @@ textarea {
   border: none;
   padding: 10px 15px;
   font-size: 1em;
+  margin-top: 25px;
 }
 
 .btn.btn-dark {
