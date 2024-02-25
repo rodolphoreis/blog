@@ -1,7 +1,59 @@
 .register {
   text-align: center;
+  margin-top: 100px;
 }
 
 .register p {
   color: #aaa;
+  margin-bottom: 90px;
+}
+
+@media (max-width: 750px) {
+  .register {
+    text-align: center;
+    margin-top: 100px;
+  }
+  .register h1 {
+    font-size: 30px;
+  }
+
+  .register p {
+    font-size: 19px;
+    margin-bottom: 50px;
+  }
+  .register form {
+    margin: 0 50px;
+  }
+  input {
+    width: 529px;
+  }
+  .register button {
+    margin-left: 214px;
+    margin-top: 31px;
+  }
+}
+
+@media (max-width: 400px) {
+  .register {
+    text-align: center;
+    margin-top: 20px;
+  }
+  .register h1 {
+    font-size: 20px;
+  }
+
+  .register p {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+  .register form {
+    margin: 0 30px;
+  }
+  input {
+    width: 329px;
+  }
+  .register button {
+    margin-left: 106px;
+    margin-top: 11px;
+  }
 }
