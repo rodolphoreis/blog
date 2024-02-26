@@ -44,16 +44,19 @@
 
   .register p {
     font-size: 14px;
-    margin-bottom: 30px;
+    margin-bottom: 26px;
   }
   .register form {
-    margin: 0 30px;
+    margin: 0 26px;
   }
   input {
     width: 329px;
   }
   .register button {
     margin-left: 106px;
-    margin-top: 11px;
+    margin-top: 8px;
+  }
+  .register .error {
+    width: 328px;
   }
 }
