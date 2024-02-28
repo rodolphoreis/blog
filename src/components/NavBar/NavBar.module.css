@@ -90,12 +90,20 @@
 
 @media (max-width: 400px) {
   .navBar {
+    position: fixed;
+    top: 0;
+    width: 97%;
     padding: 0.5em 0.7em;
   }
-
+  svg {
+    padding-right: 22px;
+  }
   .brand {
     font-size: 1.4em;
     font-weight: bold;
+  }
+  li {
+    text-align: left;
   }
 
   .brand span {
