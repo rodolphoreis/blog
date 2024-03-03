@@ -3,7 +3,11 @@ import styles from "./NavBar.module.css";
 
 // React imports
 import { useState, useEffect } from "react";
-import classnames from "classnames";
+
+// hooks
+import { useAuthentication } from "../../hooks/useAuthentication";
+
+import { useAuthValue } from "../../context/AuthContext";
 
 // React router dom imports
 import { NavLink } from "react-router-dom";
@@ -16,6 +20,8 @@ import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import "aos/dist/aos.css";
 
 const NavBar = () => {
+  const { user } = useAuthValue();
+
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
   const toggleMobileMenu = () => {
@@ -46,24 +52,50 @@ const NavBar = () => {
               Home
             </NavLink>
           </li>
-          <li>
-            <NavLink
-              to="/login"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-              onClick={closeMobileMenu}
-            >
-              Entrar
-            </NavLink>
-          </li>
-          <li>
-            <NavLink
-              to="/register"
-              className={({ isActive }) => (isActive ? styles.active : "")}
-              onClick={closeMobileMenu}
-            >
-              Cadastrar
-            </NavLink>
-          </li>
+          {!user && (
+            <>
+              <li>
+                <NavLink
+                  to="/login"
+                  className={({ isActive }) => (isActive ? styles.active : "")}
+                  onClick={closeMobileMenu}
+                >
+                  Entrar
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/register"
+                  className={({ isActive }) => (isActive ? styles.active : "")}
+                  onClick={closeMobileMenu}
+                >
+                  Cadastrar
+                </NavLink>
+              </li>
+            </>
+          )}
+          {user && (
+            <>
+              <li>
+                <NavLink
+                  to="/posts/create"
+                  className={({ isActive }) => (isActive ? styles.active : "")}
+                  onClick={closeMobileMenu}
+                >
+                  Novo Post
+                </NavLink>
+              </li>
+              <li>
+                <NavLink
+                  to="/dashboard"
+                  className={({ isActive }) => (isActive ? styles.active : "")}
+                  onClick={closeMobileMenu}
+                >
+                  Dashboard
+                </NavLink>
+              </li>
+            </>
+          )}
           <li>
             <NavLink
               to="/about"
