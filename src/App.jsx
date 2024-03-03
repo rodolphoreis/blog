@@ -23,7 +23,6 @@ import Home from "./pages/Home/Home";
 import About from "./pages/About/About";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register/Register";
-import { l } from "vite/dist/node/types.d-jgA8ss1A";
 
 function App() {
   const [user, setUser] = useState(undefined);
