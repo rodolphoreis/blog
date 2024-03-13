@@ -6,6 +6,7 @@
 .register p {
   color: #aaa;
   margin-bottom: 90px;
+  font-size: 19px;
 }
 
 @media (max-width: 750px) {
