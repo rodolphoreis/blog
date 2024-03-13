@@ -21,6 +21,7 @@ import "aos/dist/aos.css";
 
 const NavBar = () => {
   const { user } = useAuthValue();
+  const { logout } = useAuthentication();
 
   const [isMobileMenuVisible, setMobileMenuVisible] = useState(false);
 
@@ -105,6 +106,11 @@ const NavBar = () => {
               Sobre
             </NavLink>
           </li>
+          {user && (
+            <li>
+              <button onClick={logout}>Sair</button>
+            </li>
+          )}
         </ul>
         <div className={styles.mobileMenuButton} onClick={toggleMobileMenu}>
           {isMobileMenuVisible ? (
