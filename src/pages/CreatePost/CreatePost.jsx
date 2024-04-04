@@ -38,6 +38,7 @@ const CreatePost = () => {
       uid: user.uid,
       createdby: user.displayName,
     });
+
   };
 
   return (
