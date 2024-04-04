@@ -79,14 +79,14 @@ const CreatePost = () => {
             value={tags}
           />
         </label>
-        <button className="btn">Cadastrar</button>
-        {/*  {!loading && <button className="btn">Cadastrar</button>}
-        {loading && (
+
+        {!response.loading && <button className="btn">Cadastrar</button>}
+        {response.loading && (
           <button className="btn" disabled>
             Aguarde...
           </button>
         )}
-        {error && <p className="error">{error}</p>} */}
+        {response.error && <p className="error">{error}</p>}
       </form>
     </div>
   );
