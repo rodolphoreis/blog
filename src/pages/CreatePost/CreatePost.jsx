@@ -68,7 +68,7 @@ const CreatePost = () => {
           />
         </label>
         <label>
-          <span>URL da imagem:</span>
+          <span>Comentário:</span>
           <textarea
             name="body"
             required
