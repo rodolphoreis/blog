@@ -95,7 +95,7 @@ const CreatePost = () => {
             Aguarde...
           </button>
         )}
-        {response.error && <p className="error">{error}</p>}
+        {response.error && <p className="error">{response.error}</p>}
       </form>
     </div>
   );
