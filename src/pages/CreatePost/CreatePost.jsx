@@ -18,7 +18,7 @@ const CreatePost = () => {
 
   const { user } = useAuthValue();
 
-  const { insertDocument, response } = useInsertDocument();
+  const notify = () => toast("Comentário feito com sucesso!");
 
   const handleSubmit = (e) => {
     e.preventDefault();
