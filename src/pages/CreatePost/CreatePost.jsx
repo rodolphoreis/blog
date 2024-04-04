@@ -97,6 +97,12 @@ const CreatePost = () => {
         )}
         {response.error && <p className="error">{response.error}</p>}
       </form>
+      <ToastContainer
+        style={{
+          "--Toastify__progress-bar--color": "blue",
+          "--Toastify__progress-bar--background": "blue",
+        }}
+      />
     </div>
   );
 };
