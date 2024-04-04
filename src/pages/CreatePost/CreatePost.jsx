@@ -4,6 +4,7 @@ import styles from "./CreatePost.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuthValue } from "../../context/AuthContext";
+import { useInsertDocument } from "../../hooks/useinsertDocument";
 
 const CreatePost = () => {
   const [title, setTitle] = useState("");
@@ -12,9 +13,22 @@ const CreatePost = () => {
   const [tags, setTags] = useState([]);
   const [formError, setFormError] = useState("");
 
+  const { user } = useAuthValue();
+
+  const { insertDocument, response } = useInsertDocument();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormError("");
+
+    insertDocument({
+      title,
+      image,
+      body,
+      tags,
+      uid: user.uid,
+      createdby: user.displayName,
+    });
   };
 
   return (
