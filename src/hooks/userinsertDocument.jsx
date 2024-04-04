@@ -7,7 +7,18 @@ const initialState = {
   error: null,
 };
 
-const insertReducer = (state, action) => {};
+const insertReducer = (state, action) => {
+  switch (action.type) {
+    case "LOADING":
+      return { loading: true, error: null };
+    case "INSERTED_DOC":
+      return { loading: false, error: null };
+    case "ERROR":
+      return { loading: false, error: action.payload };
+    default:
+      return state;
+  }
+};
 
 export const useInsertDocument = (docCollection) => {
   const [response, dispatch] = useState(false);
