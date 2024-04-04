@@ -18,11 +18,17 @@ const CreatePost = () => {
 
   const { user } = useAuthValue();
 
+  const { insertDocument, response } = useInsertDocument("posts");
+
   const notify = () => toast("Comentário feito com sucesso!");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setFormError("");
+    setTitle("");
+    setImage("");
+    setBody("");
+    setTags("");
 
     insertDocument({
       title,
