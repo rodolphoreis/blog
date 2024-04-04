@@ -14,6 +14,7 @@ const CreatePost = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setFormError("");
   };
 
   return (
