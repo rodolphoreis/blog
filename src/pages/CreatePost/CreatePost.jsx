@@ -39,6 +39,7 @@ const CreatePost = () => {
       createdby: user.displayName,
     });
 
+    notify();
   };
 
   return (
