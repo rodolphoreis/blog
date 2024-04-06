@@ -55,6 +55,8 @@ const CreatePost = () => {
       createdby: user.displayName,
     });
 
+    navigate("/");
+
     notify();
   };
 
