@@ -1,6 +1,7 @@
 // css
 import styles from "./Home.module.css";
 
+import { useNavigate, Link } from "react-router-dom";
 const Home = () => {
   return (
     <div>
