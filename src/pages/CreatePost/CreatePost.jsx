@@ -30,6 +30,12 @@ const CreatePost = () => {
     setBody("");
     setTags("");
 
+    try {
+      new URL(image);
+    } catch (error) {
+      setFormError("A imagem precisa ser uma URL.");
+    }
+
     insertDocument({
       title,
       image,
