@@ -9,9 +9,13 @@ import { useState } from "react";
 const Home = () => {
   const [query, setQuery] = useState("");
   const [posts] = useState([]);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <div>
-      <h1>Home</h1>
+    <div className={styles.home}>
     </div>
   );
 };
