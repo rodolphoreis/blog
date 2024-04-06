@@ -36,11 +36,19 @@ const CreatePost = () => {
       setFormError("A imagem precisa ser uma URL.");
     }
 
+    const tagsArray = tags.split(",").map((tag) => tag.trim().toLowerCase());
+
+    if (!title || !image || !tags || !body) {
+      setFormError("Por favor, preencha todos os campos!");
+    }
+
+    if (formError) return;
+
     insertDocument({
       title,
       image,
       body,
-      tags,
+      tagsArray,
       uid: user.uid,
       createdby: user.displayName,
     });
@@ -104,6 +112,7 @@ const CreatePost = () => {
           </button>
         )}
         {response.error && <p className="error">{response.error}</p>}
+        {formError && <p className="error">{formError}</p>}
       </form>
       <ToastContainer
         style={{
