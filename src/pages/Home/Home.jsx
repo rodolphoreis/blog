@@ -7,6 +7,7 @@ import { useNavigate, Link } from "react-router-dom";
 import { useState } from "react";
 
 const Home = () => {
+  const [query, setQuery] = useState("");
   const [posts] = useState([]);
   return (
     <div>
