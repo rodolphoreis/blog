@@ -20,6 +20,8 @@ const CreatePost = () => {
 
   const { insertDocument, response } = useInsertDocument("posts");
 
+  const navigate = useNavigate();
+
   const notify = () => toast("Comentário feito com sucesso!");
 
   const handleSubmit = (e) => {
