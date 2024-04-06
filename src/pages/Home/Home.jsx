@@ -1,6 +1,7 @@
 // css
 import styles from "./Home.module.css";
 
+// hooks
 import { useNavigate, Link } from "react-router-dom";
 
 // react
