@@ -18,6 +18,18 @@ h1 {
   margin-top: 61px;
 }
 
+.input_home {
+  margin-bottom: 0;
+  font-size: 17px;
+  padding-top: 20px;
+  transform: translateY(-8px);
+}
+
+.input_home::placeholder {
+  transform: translateY(12px);
+  font-size: 14px;
+}
+
 .btn {
   margin-bottom: 24px;
 }
