@@ -22,6 +22,7 @@ const Home = () => {
         <input
           type="text"
           placeholder="Ou busque por tags..."
+          className={styles.input_home}
           onChange={(e) => setQuery(e.target.value)}
         />
 
