@@ -2,7 +2,7 @@
 import styles from "./Home.module.css";
 
 // hooks
-import { useNavigate, Link, Navigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 // react
 import { useState } from "react";
@@ -14,6 +14,8 @@ import PostsDetail from "../../components/posts/PostsDetail";
 const Home = () => {
   const [query, setQuery] = useState("");
   const { documents: posts, loading } = useFetchDocuments("posts");
+
+  const Navigate = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();
