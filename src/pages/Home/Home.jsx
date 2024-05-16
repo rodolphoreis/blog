@@ -9,7 +9,7 @@ import { useState } from "react";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 
 // components
-import PostsDetail from "../../components/posts/PostsDetail";
+import PostDetail from "../../components/posts/PostDetail";
 
 const Home = () => {
   const [query, setQuery] = useState("");
@@ -40,8 +40,7 @@ const Home = () => {
       </form>
       <div>
         {loading && <p>Carregando...</p>}
-        {posts &&
-          posts.map((post) => <PostsDetail key={post.id} post={post} />)}
+        {posts && posts.map((post) => <PostDetail key={post.id} post={post} />)}
         {posts && posts.length === 0 && (
           <div className={styles.noposts}>
             <p>Não foram encontrados posts</p>
