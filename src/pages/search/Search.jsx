@@ -1,13 +1,14 @@
+import PostDetail from "../../components/posts/PostDetail";
 import { useFetchDocuments } from "../../hooks/useFetchDocuments";
 import { useQuery } from "../../hooks/useQuery";
-import PostDetail from "../../hooks/postDetail";
+
 import { Link } from "react-router-dom";
 
 const Search = () => {
   const query = useQuery();
   const search = query.get("q");
 
-  const { documents: posts } = useFetchDocuments("posts");
+  const { documents: posts } = useFetchDocuments("posts", search);
 
   return (
     <div>
